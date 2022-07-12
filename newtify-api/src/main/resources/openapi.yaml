@@ -39,6 +39,45 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ArticleDTO"
+    get:
+      description: This endpoint will return list of articles
+      operationId: retrieveArticles
+      tags:
+        - articles
+      parameters:
+        - in: query
+          name: topic
+          schema:
+            type: string
+          description: Used to filter articles by topic
+      responses:
+        "200":
+          description: It will return list of articles
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ArticleDTO"
+  /v1/articles/{articleUuid}:
+    get:
+      description: This is the endpoint which will return the detail of specified article
+      operationId: retrieveArticle
+      tags:
+        - articles
+      parameters:
+        - name: articleUuid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: returns detail of article
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ArticleDTO"
   /v1/namedays:
     get:
       description: Endpoint to retrieve name day for specified day and month
