@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * Gets or Sets ETopicType
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-07-12T16:09:25.563347+02:00[Europe/Warsaw]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-07-12T16:38:44.146966800+02:00[Europe/Warsaw]")
 public enum ETopicType {
   
   NEWS("NEWS"),
